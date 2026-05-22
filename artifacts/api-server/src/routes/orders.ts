@@ -10,9 +10,9 @@ import {
 
 const router: IRouter = Router();
 
-const WHATSAPP_PHONE = "919864099823";
+const INSTAGRAM_USERNAME = "rabinabakeryandcake";
 
-function buildWhatsAppMessage(order: {
+function buildOrderMessage(order: {
   id: number;
   customerName: string;
   customerPhone: string;
@@ -35,15 +35,15 @@ function buildWhatsAppMessage(order: {
       : "Cash on Delivery";
 
   return (
-    `*New Order #${order.id} - Rabina's Bakery*\n\n` +
-    `*Customer:* ${order.customerName}\n` +
-    `*Phone:* ${order.customerPhone}\n` +
-    (order.customerEmail ? `*Email:* ${order.customerEmail}\n` : "") +
-    (order.deliveryAddress ? `*Delivery Address:* ${order.deliveryAddress}\n` : "") +
-    `\n*Items:*\n${itemLines}\n\n` +
-    `*Total:* ₹${Number(order.totalAmount).toLocaleString('en-IN')}\n` +
-    `*Payment:* ${paymentLabel}\n` +
-    (order.notes ? `*Notes:* ${order.notes}\n` : "") +
+    `New Order #${order.id} - Rabina's Bakery\n\n` +
+    `Customer: ${order.customerName}\n` +
+    `Phone: ${order.customerPhone}\n` +
+    (order.customerEmail ? `Email: ${order.customerEmail}\n` : "") +
+    (order.deliveryAddress ? `Delivery Address: ${order.deliveryAddress}\n` : "") +
+    `\nItems:\n${itemLines}\n\n` +
+    `Total: ₹${Number(order.totalAmount).toLocaleString('en-IN')}\n` +
+    `Payment: ${paymentLabel}\n` +
+    (order.notes ? `Notes: ${order.notes}\n` : "") +
     `\nPlease confirm this order. Thank you!`
   );
 }
@@ -66,7 +66,6 @@ router.post("/orders", async (req, res): Promise<void> => {
 
   const { items: inputItems, ...orderData } = parsed.data;
 
-  const productIds = inputItems.map(i => i.productId);
   const products = await db.select().from(productsTable);
   const productMap = new Map(products.map(p => [p.id, p]));
 
@@ -108,24 +107,23 @@ router.post("/orders", async (req, res): Promise<void> => {
     })
     .returning();
 
-  const message = buildWhatsAppMessage({
+  const orderMessage = buildOrderMessage({
     ...order,
     totalAmount: order.totalAmount,
     items: order.items as typeof orderItems,
   });
 
-  const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+  const instagramUrl = `https://ig.me/m/${INSTAGRAM_USERNAME}`;
 
-  req.log.info({ orderId: order.id, whatsappUrl }, "Order created, WhatsApp URL generated");
-
-  await db.update(ordersTable).set({ whatsappSent: true }).where(eq(ordersTable.id, order.id));
+  req.log.info({ orderId: order.id, instagramUsername: INSTAGRAM_USERNAME }, "Order created");
 
   res.status(201).json({
     ...order,
     totalAmount: parseFloat(order.totalAmount),
     items: order.items,
-    whatsappSent: true,
-    whatsappUrl,
+    whatsappSent: false,
+    instagramUrl,
+    orderMessage,
   });
 });
 

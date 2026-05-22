@@ -72,7 +72,7 @@ export default function Cart() {
           clearCart();
           toast({
             title: "Order Placed Successfully",
-            description: "We've received your order and sent a WhatsApp confirmation.",
+            description: "We've received your order. Send us a DM on Instagram to confirm.",
           });
           setLocation(`/order-confirmation/${order.id}`);
         },
