@@ -24,7 +24,7 @@ function buildWhatsAppMessage(order: {
   notes?: string | null;
 }): string {
   const itemLines = order.items
-    .map(i => `  - ${i.productName} x${i.quantity} = NPR ${Number(i.subtotal).toLocaleString()}`)
+    .map(i => `  - ${i.productName} x${i.quantity} = ₹${Number(i.subtotal).toLocaleString('en-IN')}`)
     .join("\n");
 
   const paymentLabel =
@@ -41,7 +41,7 @@ function buildWhatsAppMessage(order: {
     (order.customerEmail ? `*Email:* ${order.customerEmail}\n` : "") +
     (order.deliveryAddress ? `*Delivery Address:* ${order.deliveryAddress}\n` : "") +
     `\n*Items:*\n${itemLines}\n\n` +
-    `*Total:* NPR ${Number(order.totalAmount).toLocaleString()}\n` +
+    `*Total:* ₹${Number(order.totalAmount).toLocaleString('en-IN')}\n` +
     `*Payment:* ${paymentLabel}\n` +
     (order.notes ? `*Notes:* ${order.notes}\n` : "") +
     `\nPlease confirm this order. Thank you!`

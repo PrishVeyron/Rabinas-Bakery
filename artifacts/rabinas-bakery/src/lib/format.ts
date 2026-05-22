@@ -1,7 +1,7 @@
 export const formatNPR = (amount: number) => {
-  return new Intl.NumberFormat('en-NP', {
+  return new Intl.NumberFormat('en-IN', {
     style: 'currency',
-    currency: 'NPR',
+    currency: 'INR',
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(amount);

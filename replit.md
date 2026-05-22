@@ -53,7 +53,7 @@ A full-stack bakery website for Rabina's Bakery — selling handcrafted cookies 
 ## User preferences
 
 - WhatsApp number for order notifications: +91 9864099823
-- Currency: NPR (Nepali Rupees)
+- Currency: INR (Indian Rupees ₹)
 
 ## Gotchas
 

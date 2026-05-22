@@ -25,7 +25,7 @@ export default function OrderConfirmation() {
 
   useEffect(() => {
     if (order && order.paymentMethod === "qr_code") {
-      const paymentString = `Pay NPR ${order.totalAmount} to Rabina's Bakery - Order #${order.id}`;
+      const paymentString = `Pay INR ${order.totalAmount} to Rabina's Bakery - Order #${order.id}`;
       QRCode.toDataURL(paymentString, {
         width: 300,
         margin: 2,
@@ -133,7 +133,7 @@ export default function OrderConfirmation() {
             </CardHeader>
             <CardContent className="p-8 text-center flex flex-col items-center">
               <p className="text-muted-foreground mb-6">
-                Scan this QR code with eSewa or FonePay to complete your payment of <strong>{formatNPR(order.totalAmount)}</strong>
+                Scan this QR code with any UPI app to complete your payment of <strong>{formatNPR(order.totalAmount)}</strong>
               </p>
               
               {qrCodeDataUrl ? (
