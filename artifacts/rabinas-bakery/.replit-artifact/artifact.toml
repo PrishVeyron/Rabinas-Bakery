@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Rabina's Bakery"
+version = "1.0.0"
+id = "artifacts/rabinas-bakery"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24455
+
+[services.development]
+run = "pnpm --filter @workspace/rabinas-bakery run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/rabinas-bakery", "run", "build" ]
+publicDir = "artifacts/rabinas-bakery/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24455"
+BASE_PATH = "/"

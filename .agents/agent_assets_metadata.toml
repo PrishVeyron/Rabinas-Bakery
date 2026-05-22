@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "O14D9U4oWFqdYt3vfpzvB"
+uri = "file://artifacts/rabinas-bakery/public/images/cookie.png"
+type = "image"
+title = "Chocolate chip cookies"
+
+[[generated]]
+id = "QncF6IRXGGWLcNA9r8Knd"
+uri = "file://artifacts/rabinas-bakery/public/images/cake.png"
+type = "image"
+title = "Coconut layer cake"
+
+[[generated]]
+id = "8JNdzfeq2aDbAygJKQF0I"
+uri = "file://artifacts/rabinas-bakery/public/images/special.png"
+type = "image"
+title = "Specialty pastries"
+
+[[generated]]
+id = "kIT8y_vBWUDfB1rLRhOep"
+uri = "file://artifacts/rabinas-bakery/public/images/hero.png"
+type = "image"
+title = "Bakery hero background"
