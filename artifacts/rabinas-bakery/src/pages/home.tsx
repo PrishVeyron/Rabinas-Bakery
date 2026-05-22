@@ -28,24 +28,23 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto"
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary-foreground backdrop-blur-md text-sm font-medium mb-6 uppercase tracking-wider border border-primary/30">
-              Made with Natural Coconut Oil
+            <span className="inline-block py-1.5 px-4 rounded-full bg-yellow-400 text-yellow-900 text-sm font-extrabold mb-6 uppercase tracking-wide shadow-lg">
+              🥥 Made with Natural Coconut Oil
             </span>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 drop-shadow-lg leading-tight">
-              Baked with love,<br/>tastes like home.
+            <h1 className="text-5xl md:text-7xl font-serif text-white mb-6 drop-shadow-lg leading-tight">
+              Baked with love,<br/>tastes like magic!
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-10 drop-shadow-md max-w-2xl mx-auto">
-              Discover Kathmandu's coziest secret. Handcrafted cookies and cakes made from scratch, 
-              just like your neighbor's secret baking talent.
+            <p className="text-lg md:text-xl text-white/90 mb-10 drop-shadow-md max-w-2xl mx-auto font-semibold">
+              Kathmandu's happiest secret 🍪 Handcrafted cookies and cakes made fresh daily — one bite and you'll be hooked!
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/menu">
-                <Button size="lg" className="w-full sm:w-auto text-lg h-14 px-8 shadow-xl">
-                  Order Now
+                <Button size="lg" className="w-full sm:w-auto text-lg h-14 px-10 shadow-xl font-bold rounded-2xl bg-primary hover:bg-primary/90">
+                  Order Now 🎉
                 </Button>
               </Link>
               <Link href="/about">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg h-14 px-8 bg-white/10 text-white hover:bg-white/20 hover:text-white border-white/30 backdrop-blur-sm">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg h-14 px-8 bg-white/10 text-white hover:bg-white/25 hover:text-white border-white/40 backdrop-blur-sm rounded-2xl font-bold">
                   Our Story
                 </Button>
               </Link>
@@ -58,9 +57,10 @@ export default function Home() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4">Fresh from the Oven</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our most loved creations, baked fresh daily. Perfect for treating yourself or sharing with someone special.
+            <span className="inline-block text-3xl mb-4">🍰</span>
+            <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">Fresh from the Oven!</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-medium">
+              Our most-loved creations, baked fresh daily. Treat yourself — you absolutely deserve it.
             </p>
           </div>
 
@@ -168,15 +168,16 @@ export default function Home() {
       
       {/* CTA Section */}
       <section className="py-24 bg-primary text-primary-foreground text-center px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px), radial-gradient(circle at 60% 80%, white 1px, transparent 1px)", backgroundSize: "60px 60px" }}></div>
         <div className="container mx-auto relative z-10 max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Ready for something sweet?</h2>
-          <p className="text-xl text-primary-foreground/90 mb-10">
-            Let us bake something special just for you today.
+          <div className="text-5xl mb-6">🍪✨🎂</div>
+          <h2 className="text-4xl md:text-5xl font-serif mb-6">Ready for something sweet?</h2>
+          <p className="text-xl text-primary-foreground/90 mb-10 font-semibold">
+            Let us bake something special just for you — today, tomorrow, any day!
           </p>
           <Link href="/menu">
-            <Button size="lg" variant="secondary" className="text-lg h-14 px-10 shadow-xl">
-              Browse Menu & Order
+            <Button size="lg" variant="secondary" className="text-lg h-14 px-10 shadow-xl font-bold rounded-2xl">
+              Browse Menu & Order 🛒
             </Button>
           </Link>
         </div>
