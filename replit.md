@@ -40,7 +40,7 @@ A full-stack bakery website for Rabina's Bakery — selling handcrafted cookies 
 - QR code payment is generated client-side using the `qrcode` package with the order total and ID
 - Credit card form is display-only (no real payment processing) — for a real integration, add Stripe or similar
 - Orders store full item snapshot (name, price) in a JSONB column so they're immutable even if product prices change later
-- WhatsApp number: 9864099823 (formatted as +9779864099823 for wa.me links)
+- WhatsApp number: 9864099823 (formatted as +919864099823 for wa.me links)
 
 ## Product
 
@@ -52,7 +52,7 @@ A full-stack bakery website for Rabina's Bakery — selling handcrafted cookies 
 
 ## User preferences
 
-- WhatsApp number for order notifications: 9864099823
+- WhatsApp number for order notifications: +91 9864099823
 - Currency: NPR (Nepali Rupees)
 
 ## Gotchas

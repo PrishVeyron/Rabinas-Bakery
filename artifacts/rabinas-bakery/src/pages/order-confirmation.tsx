@@ -77,7 +77,7 @@ export default function OrderConfirmation() {
 
         <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 mb-8 text-center shadow-sm">
           <p className="text-lg font-medium text-foreground">
-            Order confirmation sent to WhatsApp <strong>+977 9864099823</strong>
+            Order confirmation sent to WhatsApp <strong>+91 9864099823</strong>
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             We'll contact you shortly to confirm delivery details.
@@ -147,7 +147,7 @@ export default function OrderConfirmation() {
               <div className="bg-muted px-4 py-3 rounded-lg flex items-center gap-3 w-full max-w-sm">
                 <div className="flex-1 text-left">
                   <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Or pay to number</p>
-                  <p className="font-mono font-bold text-lg tracking-wider">9864099823</p>
+                  <p className="font-mono font-bold text-lg tracking-wider">+91 9864099823</p>
                 </div>
                 <Button variant="outline" size="icon" className="shrink-0">
                   <Copy className="h-4 w-4" />

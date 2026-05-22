@@ -114,7 +114,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               <h4 className="font-bold text-foreground mb-4">Contact Us</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>Kathmandu, Nepal</li>
-                <li>WhatsApp: +977 9864099823</li>
+                <li>WhatsApp: +91 9864099823</li>
                 <li>hello@rabinasbakery.com</li>
               </ul>
             </div>

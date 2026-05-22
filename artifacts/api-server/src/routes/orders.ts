@@ -10,7 +10,7 @@ import {
 
 const router: IRouter = Router();
 
-const WHATSAPP_PHONE = "9779864099823";
+const WHATSAPP_PHONE = "919864099823";
 
 function buildWhatsAppMessage(order: {
   id: number;
